@@ -1,0 +1,18 @@
+body{
+    background: #FEF2E4;
+    height: 100%;
+}
+footer{
+    flex: 0 0 auto;
+}
+html{
+    height: 100%;
+}
+.container{
+    min-height: 100%;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+.muller_medium{
+    font-family: MullerMedium;
+}

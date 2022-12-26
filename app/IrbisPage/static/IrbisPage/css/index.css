@@ -1,0 +1,41 @@
+.index{
+    font-size: 23px;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    margin-top: 30px;
+}
+.pretitle{
+    display: flex;
+    margin: 0 auto;
+}
+.title{
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 15px;
+}
+.title span{
+    width: 20%;
+    text-align: center;
+}
+.title::before{
+    content: "";
+    display: flex;
+    margin: auto 0;
+    width: 40%;
+    height: 1px;
+    background-color: black;
+}
+.title::after{
+    content: "";
+    display: flex;
+    margin: auto 0;
+    width: 40%;
+    height: 1px;
+    background-color: black;
+}
+.cards_frame{
+    display: flex;
+}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'IrbisPage/css/index.css' %}">
+{% endblock %}
+{% block content %}
+    <div class = "muller_medium index">
+        {% for card in cards %}
+            <div class="pretitle">{{ card.pretitle }}</div>
+            <div class="title"> <span>{{ card.title }}</span> </div>
+        {% endfor %}
+    </div>
+{% endblock %}
