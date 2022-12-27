@@ -8,6 +8,12 @@
         {% for card in cards %}
             <div class="pretitle">{{ card.pretitle }}</div>
             <div class="title"> <span>{{ card.title }}</span> </div>
+            {% if card.consists_of_images %}
+                <div class="card_content consists_of_images">{{ card.content|safe }}</div>
+            {% else %}
+                <div class="card_content">{{ card.content|safe }}</div>
+            {% endif %}
+            
         {% endfor %}
     </div>
 {% endblock %}

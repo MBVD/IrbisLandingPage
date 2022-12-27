@@ -3,6 +3,12 @@
     display: flex;
     flex-direction: column;
 }
+.pretitle{
+    margin-top: 20px !important;
+}
+.index > div{
+    margin-top: 30px;
+}
 .container{
     margin-top: 30px;
 }
@@ -36,6 +42,15 @@
     height: 1px;
     background-color: black;
 }
-.cards_frame{
+.card_content.consists_of_images > div{
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card_content.consists_of_images > div img{
+    width: 14%;
+    min-width: 150px;
+    max-width: 150px;
+    margin: 0px 30px 20px;
 }
