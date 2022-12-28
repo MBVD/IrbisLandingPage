@@ -6,7 +6,11 @@
 .pretitle{
     margin-top: 20px !important;
 }
-.index > div{
+.index section{
+    display: flex;
+    flex-direction: column;
+}
+.index section > div{
     margin-top: 30px;
 }
 .container{
@@ -52,5 +56,47 @@
     width: 14%;
     min-width: 150px;
     max-width: 150px;
-    margin: 0px 30px 20px;
+    margin: 0 auto;
+    float: none !important;
+}
+.slick-track {
+    display: flex !important;
+    align-items: center;
+}
+.hidden{
+    opacity: 0;
+}
+.show{
+    display: flex !important;
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateX(0);
+}
+@media all and (min-width: 1200px){
+    .slick-track{
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .index_part:nth-child(2n).hidden{
+        transform: translateX(-40vw);
+    }
+    .index_part:nth-child(2n+1).hidden{
+        transform: translateX(+40vw);
+    }
+}
+@media all and (max-width: 900px){
+    .title::before{
+        display: none;
+    }
+    .title::after{
+        display: none;
+    }
+    .title span{
+        margin: 0 auto;
+        width: 100%;
+    }
+    .card_content{
+        border-bottom: 1px solid;
+        padding-bottom: 20px;
+    }
 }

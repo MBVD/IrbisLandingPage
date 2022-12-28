@@ -1,5 +1,5 @@
 {% load static %}
-<header class = "muller_medium">
+<header class = "muller_medium desctop">
     <div>
         <div class = "header_block logo">
             <a href="{% url 'home' %}"><img src="{% static 'IrbisPage/images/logo.svg' %}" alt="" class = "logo"></a>
@@ -15,3 +15,62 @@
         </div>
     </div>
 </header>
+<!-- мобилка -->
+<header class = "header_mobile">
+    <div>
+        <div class = "header_block ">
+            <a onclick="open_burger(this)">
+                <img src="{% static 'IrbisPage/images/burger.svg'%}" alt="" id = "burger_img">
+            </a>
+        </div>
+        <div class = "header_block">
+            <a href="{% url 'home' %}"><img src="{% static 'IrbisPage/images/logo.svg' %}" alt="" class = "logo"></a>
+        </div>
+    </div>
+</header>
+<div id = "back_to_open" onclick="onlyclose(this)" style = "display: none;"></div>
+<div class = "header_menu_for_mobile close">
+    <div class = "menu muller_medium">
+        <div class="link">
+            <a href="{% url 'home' %}"> О компании </a>
+        </div>
+        <div class="link">
+            <a href="{% url 'solutions' %}"> Решения </a>
+        </div>
+        <div class = "link">
+            <a href=""> Услуги </a>
+        </div>
+    </div>
+</div>
+<!-- конец мобилки -->
+<script>
+    function open_burger(burger){
+        header_for_mobile = document.getElementsByClassName("header_menu_for_mobile")[0];
+        image = document.getElementById("burger_img");
+        back_to_open = document.getElementById("back_to_open");
+        
+        if (header_for_mobile.classList.contains("close")){ // открытие
+            image.src = "{% static 'IrbisPage/images/cross.svg' %}"
+            image.classList.remove("menu_1")
+            image.classList.add("cross")
+            header_for_mobile.classList.remove("close");
+            header_for_mobile.classList.add("open");
+            back_to_open.style.display = "block";
+        }
+        else{
+            onlyclose();
+        } 
+    }
+    function onlyclose(){
+        header_for_mobile = document.getElementsByClassName("header_menu_for_mobile")[0];
+        image = document.getElementById("burger_img");
+        back_to_open = document.getElementById("back_to_open");
+       
+        image.src = "{% static 'IrbisPage/images/burger.svg' %}"
+        image.classList.remove("cross")
+        image.classList.add("menu_1")
+        header_for_mobile.classList.remove("open");
+        header_for_mobile.classList.add("close");
+        back_to_open.style.display = "none";
+    }
+</script>
