@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{title}}</title>
   <link rel="stylesheet" href="{% static 'IrbisPage/css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'IrbisPage/css/header.css' %}">
+  <link rel="stylesheet" href="{% static 'IrbisPage/css/footer.css' %}">
   <style>
     @font-face {
         font-family: MullerMedium; 
@@ -30,4 +32,6 @@
     </div>
     {% include 'share/footer.html' %}
 </body>
+    <script src="{% static 'IrbisPage/js/jquery-3.6.1.js' %}"></script>
+    {% block js %}{% endblock %}
 </html>

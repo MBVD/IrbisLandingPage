@@ -1,18 +1,17 @@
 {% load static %}
-<head>
-    <link rel="stylesheet" href="{% static 'IrbisPage/css/header.css' %}">
-</head>
 <header class = "muller_medium">
-    <div class = "header_block logo">
-        <a href="{% url 'home' %}"><img src="{% static 'IrbisPage/images/logo.svg' %}" alt="" class = "logo"></a>
-    </div>
-    <div class = "header_block ">
-        <a href="{% url 'home' %}"> О компании </a>
-    </div>
-    <div class = "header_block">
-        <a href="{% url 'solutions' %}"> Решения </a>
-    </div>
-    <div class = "header_block">
-        <a href=""> Услуги </a>
+    <div>
+        <div class = "header_block logo">
+            <a href="{% url 'home' %}"><img src="{% static 'IrbisPage/images/logo.svg' %}" alt="" class = "logo"></a>
+        </div>
+        <div class = "header_block ">
+            <a href="{% url 'home' %}"> О компании </a>
+        </div>
+        <div class = "header_block">
+            <a href="{% url 'solutions' %}"> Решения </a>
+        </div>
+        <div class = "header_block">
+            <a href=""> Услуги </a>
+        </div>
     </div>
 </header>

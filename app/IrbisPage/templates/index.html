@@ -2,6 +2,8 @@
 {% load static %}
 {% block head %}
     <link rel="stylesheet" href="{% static 'IrbisPage/css/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'IrbisPage/js/slick/slick.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'IrbisPage/js/slick/slick-theme.css' %}"/>
 {% endblock %}
 {% block content %}
     <div class = "muller_medium index">
@@ -16,4 +18,39 @@
             
         {% endfor %}
     </div>
+{% endblock %}
+{% block js %}
+    <script src="{% static 'IrbisPage/js/slick/slick.min.js' %}"></script>
+    <script>
+        $('.consists_of_images > div img').wrap("<div class = 'img_frame'></div>");
+        $('.consists_of_images > div').slick({
+            responsive: [
+                {
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 2400,
+                    settings: {
+                        slidesToShow: 8,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 1500,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 4,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+            ]
+        })
+    </script>
 {% endblock %}

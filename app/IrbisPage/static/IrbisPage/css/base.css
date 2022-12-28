@@ -1,9 +1,16 @@
 body{
     background: #FEF2E4;
     height: 100%;
+    margin: 0 0;
 }
 footer{
     flex: 0 0 auto;
+    margin-top: 20px;
+    border-top: 1px solid;
+}
+footer > div{
+    width: calc(100% - 30px);
+    margin: 0 auto;
 }
 html{
     height: 100%;
