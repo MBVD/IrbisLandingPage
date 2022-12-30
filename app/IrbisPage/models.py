@@ -11,3 +11,11 @@ class Card(models.Model):
     class Meta:
         verbose_name = "Карточка"
         verbose_name_plural = "Карточки"
+
+class Service(models.Model):
+    title = models.CharField(verbose_name = 'Оглавление', max_length=50)
+    content = tinymce_models.HTMLField(verbose_name = 'Контент', blank=True)
+
+    class Meta:
+        verbose_name = "Сервис"
+        verbose_name_plural = "Сервисы"

@@ -13,3 +13,8 @@ def about(request):
 
 def solutions(request):
     return render(request, 'solutions.html', {'title': 'Решения'})
+
+def services(request):
+    service = Service.objects.all().first()
+    return render(request, 'services.html', {'title': 'Услуги',
+                                             'service': service})

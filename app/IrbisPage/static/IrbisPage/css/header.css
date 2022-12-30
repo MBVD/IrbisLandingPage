@@ -1,5 +1,4 @@
 header{
-    border-bottom: 1px solid;
     padding-bottom: 10px;
 }
 header > div{
@@ -123,5 +122,8 @@ header.header_mobile .logo{
         width: 35px;
         height: 2px;
         background-color: black;
+    }
+    header.header_mobile{
+        border-bottom:1px solid ;
     }
 }

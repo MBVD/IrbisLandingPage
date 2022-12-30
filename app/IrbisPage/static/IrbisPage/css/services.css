@@ -1,0 +1,64 @@
+.services_info_right{
+    margin-left: auto;
+    text-align: right;
+}
+.title{ 
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.services_info > div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.pretitle{
+    display: flex;
+    margin: 0 auto;  
+    margin-top: 20px !important; 
+    font-size: 23px;
+}
+.services_part{
+    display: flex;
+    flex-direction: column  ;
+    margin: 0 auto;
+}
+.pretitle_left{
+    display: flex;
+    margin-top: 20px !important; 
+    font-size: 23px;
+}
+/* начало работы с направлением */
+.vectors{
+    display: flex;
+    margin: 0 auto;
+    position: relative;   
+}
+.vector_left{
+    position: absolute;
+    right: 80px;
+}
+.vector_left span{
+    position: relative;
+    right: 25%;
+}
+.vector_right{
+    position: absolute;
+    left: 80px;
+    text-align: center;
+}
+.vector_right span{
+    position: relative;
+    left: 50%;
+}
+.consulting{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 17px;
+}
+.consulting_left{
+    display: flex;
+}
+.consulting_right{
+    display: flex;
+    padding-left: 20%;
+}
