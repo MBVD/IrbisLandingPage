@@ -50,15 +50,43 @@
     left: 50%;
 }
 .consulting{
-    display: flex;
+    width: 90%;
     margin: 0 auto;
     margin-top: 40px;
     font-size: 17px;
+    flex-wrap: wrap;
 }
 .consulting_left{
     display: flex;
+    float: left;
+    margin-right: 10%;
 }
 .consulting_right{
     display: flex;
-    padding-left: 20%;
+    float: right;
+    padding-top: 50px;
+}
+/* .services > section{
+    padding-top: 20px;
+    border: 1px solid;
+} */
+.consulting_left{
+    margin-left: 5%;
+}
+@media all and (max-width: 900px){
+    .services_part_vectors{
+        display: none;
+    }
+    .consulting{
+        width: 100%;
+    }
+    .consulting_left{
+        margin: 0;
+        float: none;
+    }
+    .consulting_right{
+        float: none ;
+        padding: 0;
+        margin-top: 10px;
+    }
 }
