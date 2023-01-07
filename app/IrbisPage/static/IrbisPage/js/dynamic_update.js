@@ -7,5 +7,6 @@ const observer = new IntersectionObserver((entries) => {
     })
 })
 $('.hidden').each(function(id, el){
+    console.log(el)
     observer.observe(el)
 })  

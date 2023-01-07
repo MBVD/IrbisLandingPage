@@ -60,15 +60,6 @@
     display: flex !important;
     align-items: center;
 }
-.hidden{
-    opacity: 0;
-}
-.show{
-    display: flex !important;
-    opacity: 1;
-    transition: all 1.5s;
-    transform: translateX(0);
-}
 @media all and (min-width: 1200px){
     .slick-track{
         justify-content: space-between;

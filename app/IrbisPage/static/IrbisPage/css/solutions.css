@@ -1,0 +1,39 @@
+.pretitle{
+    display: flex;
+    margin: 0 auto;  
+    margin-top: 20px !important; 
+    font-size: 23px;
+}
+.solutions_part{
+    display: flex;
+    flex-direction: column  ;
+    margin: 0 auto;
+}
+.solutions_info{
+    margin-top: 20px;
+}
+.subcontent{
+    margin-bottom: 25px;
+}
+.subcontent .title{
+    font-weight: bold;
+}
+.card .title{
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.card .content{
+    text-align: center;
+}
+.slider_part{
+    margin-top: 40px;
+}
+.po_directions .links{
+    display: flex;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+    color: black;
+}

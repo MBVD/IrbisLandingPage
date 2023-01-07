@@ -1,1 +1,137 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'IrbisPage/js/slick/slick.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'IrbisPage/js/slick/slick-theme.css' %}"/>
+    <link rel="stylesheet" href="{% static 'IrbisPage/css/solutions.css'%}">
+{% endblock %}
+{% block content %}
+    <div class="muller_medium solutions">
+        <section class="solutions_part hidden">
+            <div class="pretitle">Решения</div>
+            <div class="solutions_info">
+                <div class="subcontent">
+                    <div class="title">Программное обеспечение</div>
+                    <div class="content">
+                        ТОО «Ирбис Интеграция» поставляет программные решения более чем от 1000 производителей.
+                        Отличное знание программ корпоративного лицензирования позволяет нам свести к минимуму
+                        расходы заказчиков.
+                        Мы поставляем программные решения более чем от 1000 производителей. У нас вы найдете
+                        операционные системы, офисные программы, ИБ решения, системные программы, программы для
+                        бухгалтерии и склада, средства виртуализации, облачные решения, средства управления,
+                        резервного копирования, СУБД, CRM, ERP, и другие инфраструктурные и прикладные решения.
+                        Отличное знание программ корпоративного лицензирования позволяет нам свести к минимуму
+                        расходы заказчиков.
+                    </div>
+                </div>
+                <div class="subcontent">
+                    <div class="title">Традиционная поставка «софта» и «железа»</div>
+                    <div class="content">
+                        ТОО «Ирбис Интеграция» предлагает поставку программного и аппаратного обеспечения путем
+                        обычной покупки лицензий и «железа». Как правило, сделке предшествуют консультации и подбор
+                        наилучшего продукта. Сервисы ТОО «Ирбис Интеграция» помогут эффективно ввести в строй
+                        приобретенные решения.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slider_part hidden">
+            <div class="slider_block">
+                <div class="card">
+                    <div class="title">
+                        Для больших корпораций
+                    </div>
+                    <div class="content">
+                        Нам хорошо знакомы <br> потребности и специфика <br> крупных корпоративных заказчиков, у <br> которых <br>
+                        информационные технологии <br> неотделимы от бизнеса, а сбой <br> в IT абсолютно неприемлем. <br> Мы <br>
+                        обеспечиваем высочайший <br> уровень надежности, гибкости <br> и можем предложить лучшие <br> условия <br>
+                        поставки.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="title">
+                        Для средних и малых корпораций
+                    </div>
+                    <div class="content">
+                        Заказчики сегмента СМБ <br> хотели бы пользоваться <br> технологиями <br> корпоративного уровня, <br> но за <br>
+                        разумные деньги. Мы <br> можем предоставить им <br> эту возможность.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="title">
+                        Для государственных заказчиков
+                    </div>
+                    <div class="content">
+                        Для эффективной <br> работы государственной <br> власти нужны <br> современные <br> технологии, поэтому <br>
+                        сотрудничество с <br> государственными организациями — <br> большая честь для нас. <br> Мы хорошо знаем, <br>
+                        как сделать  <br> использование IT- <br> решения более <br> выгодным и <br> эффективным.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="title">
+                        Для образовательных и некоммерческих организаций
+                    </div>
+                    <div class="content">
+                        Скромное <br> финансирование или <br> особенности <br> бюджетирования часто <br> препятствуют <br> полноценному <br>
+                        внедрению современных <br> технологий. Знание <br> специальных условий <br> лицензирования и <br> поставки <br>
+                        «софта» позволяет нам <br> преодолеть эти <br> препятствия.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slider_part hidden">
+            <div class="po_directions">
+                <div class="pretitle">
+                    Направления ПО
+                </div>
+                <div class="links">
+                    <a href="">Операционные системы</a>
+                    <a href="">Офисные программы</a>
+                    <a href="">Системные программы</a>
+                    <a href="">Графика и дизайн системы</a>
+                    <a href="">Антивирусы</a>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+{% endblock %}
+{% block js %}
+    <script src="{% static 'IrbisPage/js/slick/slick.min.js' %}"></script>
+    <script src="{% static 'IrbisPage/js/dynamic_update.js' %}"></script>
+    <script>
+        $('.slider_block').slick({
+            arrows: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            infinite: true,
+            dots: false,
+            autoplay: false,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                        dots: true,
+                        autoplay: false,
+                        arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 400,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true,
+                        autoplay: false,
+                        arrows: false,
+                    }
+                },
+            ]
+        })
+    </script>
+{% endblock %}

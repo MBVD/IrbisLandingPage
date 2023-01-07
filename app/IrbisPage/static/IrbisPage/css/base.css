@@ -15,3 +15,20 @@ html{
 .muller_medium{
     font-family: MullerMedium;
 }
+.hidden{
+    opacity: 0;
+}
+.show{
+    display: flex !important;
+    opacity: 1;
+    transition: all 1.2s;
+    transform: translateX(0);
+}
+@media all and (min-width: 1200px){
+    section:nth-child(2n).hidden{
+        transform: translateX(-40vw);
+    }
+    section:nth-child(2n+1).hidden{
+        transform: translateX(+40vw);
+    }
+}
