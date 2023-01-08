@@ -2,6 +2,7 @@ body{
     background: #FEF2E4;
     height: 100%;
     margin: 0 0;
+    max-width: 100vw;
 }
 html{
     height: 100%;
@@ -19,10 +20,15 @@ html{
     opacity: 0;
 }
 .show{
-    display: flex !important;
     opacity: 1;
     transition: all 1.2s;
     transform: translateX(0);
+}
+.show.index_part{
+    display: flex !important;
+}
+.categories .links{
+    margin-left: 20px;
 }
 @media all and (min-width: 1200px){
     section:nth-child(2n).hidden{

@@ -66,20 +66,8 @@
     float: right;
     padding-top: 50px;
 }
-/* .services > section{
-    padding-top: 20px;
-    border: 1px solid;
-} */
 .consulting_left{
     margin-left: 5%;
-}
-@media all and (min-width: 1200px){
-    .services_part:nth-child(2n).hidden{
-        transform: translateX(0) !important;
-    }
-    .services_part:nth-child(2n+1).hidden{
-        transform: translateX(0) !important;
-    }
 }
 @media all and (max-width: 900px){
     .services_part_vectors{

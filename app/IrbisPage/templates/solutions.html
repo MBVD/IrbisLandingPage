@@ -79,7 +79,7 @@
                 </div>
             </div>
         </section>
-        <section class="slider_part hidden">
+        <section class="hidden">
             <div class="po_directions">
                 <div class="pretitle">
                     Направления ПО
@@ -91,7 +91,30 @@
                     <a href="">Графика и дизайн системы</a>
                     <a href="">Антивирусы</a>
                 </div>
-                
+            </div>
+        </section>
+        <div class="cards">
+            {% for card in firsts_cards %}
+                <section class="card hidden">
+                    <div>{{ card.pretitle|safe }}</div>
+                    <div>{{ card.title }}</div>
+                    <div>{{ card.content|safe }}</div>
+                </section>
+            {% endfor %}
+        </div>
+        <section class = "hidden">
+            <div class="categories">
+                <div class="pretitle">
+                    Категории апааратного обеспечения
+                </div>
+                <div class="links">
+                    <a href="">Серверы и опции</a>
+                    <a href="">Системы хранения данных</a>
+                    <a href="">Сетевое оборудование</a>
+                    <a href="">Компьютеры и периферия</a>
+                    <a href="">3D-оборудование</a>
+                    <a href="">Гаджеты</a>
+                </div>
             </div>
         </section>
     </div>

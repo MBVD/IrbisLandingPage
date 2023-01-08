@@ -4,7 +4,7 @@ from .models import *
 
 # Create your views here.
 def index(request):
-    cards = Card.objects.all()
+    cards = Card.objects.filter(for_solution = False)
     return render(request, 'index.html', {'title':'Домашняя страница',
                                           'cards': cards,})
 
@@ -12,7 +12,9 @@ def about(request):
     return render(request, 'about.html', {'title': 'О нас'})
 
 def solutions(request):
-    return render(request, 'solutions.html', {'title': 'Решения'})
+    cards = Card.objects.filter(for_solution = True)
+    return render(request, 'solutions.html', {'title': 'Решения',
+                                              'firsts_cards': cards[:5]})
 
 def services(request):
     service = Service.objects.all().first()
