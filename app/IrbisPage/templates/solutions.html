@@ -85,19 +85,19 @@
                     Направления ПО
                 </div>
                 <div class="links">
-                    <a href="">Операционные системы</a>
-                    <a href="">Офисные программы</a>
-                    <a href="">Системные программы</a>
-                    <a href="">Графика и дизайн системы</a>
-                    <a href="">Антивирусы</a>
+                    <a href="#po">Операционные системы</a>
+                    <a href="#office_programs">Офисные программы</a>
+                    <a href="#graphics_design">Графика и дизайн системы</a>
+                    <a href="#antivirus">Антивирусы</a>
                 </div>
             </div>
         </section>
         <div class="cards">
-            {% for card in firsts_cards %}
+            {% for card in cards|slice:":5" %}
                 <section class="card hidden">
+                    <a name = "{{card.link}}"></a>
                     <div>{{ card.pretitle|safe }}</div>
-                    <div>{{ card.title }}</div>
+                    <div style = "text-align: center; margin: 5px 0;">{{ card.title }}</div>
                     <div>{{ card.content|safe }}</div>
                 </section>
             {% endfor %}
@@ -108,15 +108,51 @@
                     Категории апааратного обеспечения
                 </div>
                 <div class="links">
-                    <a href="">Серверы и опции</a>
-                    <a href="">Системы хранения данных</a>
-                    <a href="">Сетевое оборудование</a>
-                    <a href="">Компьютеры и периферия</a>
-                    <a href="">3D-оборудование</a>
-                    <a href="">Гаджеты</a>
+                    <a href="#servers_options">Серверы и опции</a>
+                    <a href="#storage_systems">Системы хранения данных</a>
+                    <a href="#network_hardware">Сетевое оборудование</a>
+                    <a href="#computers_peripherals">Компьютеры и периферия</a>
+                    <a href="#3D_equipment">3D-оборудование</a>
+                    <a href="#gadgets">Гаджеты</a>
                 </div>
             </div>
         </section>
+        <div class="cards">
+            {% for card in cards|slice:"5:19" %}
+                <section class="card hidden">
+                    <a name = "{{card.link}}"></a>
+                    <div>{{ card.pretitle|safe }}</div>
+                    <div style = "text-align: center; margin: 5px 0;">{{ card.title }}</div>
+                    <div>{{ card.content|safe }}</div>
+                </section>
+            {% endfor %}
+        </div>
+        <section class = "hidden">
+            <div class="categories">
+                <div class="pretitle">
+                    Направления
+                </div>
+                <div class="links">
+                    <a href="#online_services_protection">Защита онлайн-сервисов</a>
+                    <a href="#web_email_protection">Защита веб и почты</a>
+                    <a href="#server_protection">Защита серверов, рабочих станций, виртульной инфраструктуры, мобильных устройств</a>
+                    <a href="#access_control">Управление доступом</a>
+                    <a href="#atp">Защита сети, ATP</a>
+                    <a href="#data_protection">Защита информации</a>
+                    <a href="#soc">SOC</a>
+                </div>
+            </div>
+        </section>
+        <div class="cards">
+            {% for card in cards|slice:"19:26" %}
+                <section class="card hidden">
+                    <a name = "{{card.link}}"></a>
+                    <div>{{ card.pretitle|safe }}</div>
+                    <div style = "text-align: center; margin: 5px 0;">{{ card.title }}</div>
+                    <div>{{ card.content|safe }}</div>
+                </section>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
 {% block js %}

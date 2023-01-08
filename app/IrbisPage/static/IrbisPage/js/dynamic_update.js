@@ -6,7 +6,7 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.remove("hidden")
             isBefore = false
         }
-        if (isBefore){
+        else{
             entry.target.style.transform = "translateX(0)"
         }
     })

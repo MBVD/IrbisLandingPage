@@ -3,8 +3,8 @@ from .models import *
 
 
 class CardAdmin(admin.ModelAdmin):
-    list_display = ('pretitle', 'title', 'content')
-    list_display_links = ('pretitle', 'title', 'content')
+    list_display = ('title','link', 'pk', 'for_solution')
+    list_display_links = ('title','link','pk')
 
 class ServiceAdmin(admin.ModelAdmin):
     list_display = ('title',)

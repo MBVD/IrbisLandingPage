@@ -8,6 +8,7 @@ class Card(models.Model):
     content = tinymce_models.HTMLField(verbose_name = 'Контент', blank=True)
     consists_of_images = models.BooleanField(default=False)
     for_solution = models.BooleanField(default=False)
+    link = models.CharField(verbose_name = 'ссылка', blank=True, max_length=50)
     
     class Meta:
         verbose_name = "Карточка"

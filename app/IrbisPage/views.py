@@ -14,7 +14,8 @@ def about(request):
 def solutions(request):
     cards = Card.objects.filter(for_solution = True)
     return render(request, 'solutions.html', {'title': 'Решения',
-                                              'firsts_cards': cards[:5]})
+                                              'cards': cards,
+                                             })
 
 def services(request):
     service = Service.objects.all().first()
